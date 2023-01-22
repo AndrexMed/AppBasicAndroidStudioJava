@@ -19,38 +19,45 @@
         android:fontFamily="cursive"
         android:text="Operaciones Basicas Matematicas"
         android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/Logo"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="10dp"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        />
 
     <EditText
+        android:id="@+id/campo1"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="10dp"
         android:background="@android:color/background_light"
-        android:hint="Ingrese el numero uno" />
+        android:hint="Ingrese el numero uno"
+        />
 
     <EditText
+        android:id="@+id/campo2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="@android:color/background_light"
-        android:hint="Ingrese el numero dos" />
+        android:hint="Ingrese el numero dos"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:padding="5dp"
         >
 
         <Button
@@ -62,7 +69,9 @@
             android:layout_marginEnd="2dp"
             android:layout_marginBottom="2dp"
             android:text="+"
-            android:textSize="40dp" />
+            android:textSize="40dp"
+            android:onClick="onClick"
+            />
 
         <Button
             android:id="@+id/btnResta"
@@ -74,6 +83,7 @@
             android:text="-"
             android:textSize="40dp"
             android:layout_margin="2dp"
+            android:onClick="onClick"
             />
 
         <Button
@@ -88,7 +98,9 @@
             android:layout_toEndOf="@id/btnResta"
             android:layout_toRightOf="@id/btnResta"
             android:text="*"
-            android:textSize="40dp" />
+            android:textSize="40dp"
+            android:onClick="onClick"
+            />
 
         <Button
             android:id="@+id/btnDividir"
@@ -100,16 +112,19 @@
             android:text="/"
             android:textSize="40dp"
             android:layout_margin="2dp"
+            android:onClick="onClick"
             />
 
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/etiResultado"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Resultado: "
         android:textSize="40sp"
-    />
+        android:textColor="@android:color/darker_gray"
+        />
 
 </LinearLayout>
